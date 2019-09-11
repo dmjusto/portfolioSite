@@ -4,22 +4,116 @@
     <meta charset="UTF-8">
     <title>Dylan Fairbanks</title>
 
-
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styleSheet.css">
     <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
 </head>
 <body>
+
+    <ul id="menu">
+        <li data-menuanchor="firstPage" class="active"><a href="#firstPage">Home</a></li>
+        <li data-menuanchor="secondPage"><a href="#secondPage">About</a></li>
+        <li data-menuanchor="thirdPage"><a href="#thirdPage">Skills</a></li>
+        <li data-menuanchor="fourthPage"><a href="#fourthPage">Portfolio</a></li>
+        <li data-menuanchor="fifthPage"><a href="#fifthPage">Contact</a></li>
+    </ul>
+
+
     <div id="fullpage">
-        <div class="section">Some section</div>
-        <div class="section">Some section</div>
-        <div class="section">Some section</div>
-        <div class="section">Some section</div>
+        <div class="section" id="section0">
+            <h1>Dylan<span style = "display: block;">Hansen-Fairbanks</span></h1>
+        </div>
+        <div class="section" id="section1">
+            <h1>About</h1>
+        </div>
+        <div class="section" id="section2">
+            <h1>Skills</h1>
+        </div>
+        <div class="section" id="section3">
+            <h1>Portfolio</h1>
+        </div>
+        <div class="section" id="section4">
+            <h1>Contact Me</h1>
+        </div>
     </div>
 
 
     <script type="text/javascript" src="javascript/fullpage.js"></script>
     <script type="text/javascript">
         var myFullpage = new fullpage('#fullpage', {
-            sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff']
+            //Navigation
+            menu: '#menu',
+            lockAnchors: false,
+            anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage'],
+            navigation: true,
+            navigationPosition: 'right',
+            navigationTooltips: ['firstSlide', 'secondSlide', 'thirdSlide', 'fourthSlide', 'fifthSlide'],
+            showActiveTooltip: false,
+            slidesNavigation: false,
+            slidesNavPosition: 'bottom',
+
+            //Scrolling
+            css3: true,
+            scrollingSpeed: 1000,
+            autoScrolling: true,
+            fitToSection: true,
+            fitToSectionDelay: 1000,
+            scrollBar: false,
+            easing: 'easeInOutCubic',
+            easingcss3: 'ease',
+            loopBottom: false,
+            loopTop: false,
+            loopHorizontal: true,
+            continuousVertical: false,
+            continuousHorizontal: false,
+            scrollHorizontally: false,
+            interlockedSlides: false,
+            dragAndMove: false,
+            offsetSections: false,
+            resetSliders: false,
+            fadingEffect: false,
+            normalScrollElements: '#element1, .element2',
+            scrollOverflow: false,
+            scrollOverflowReset: false,
+            scrollOverflowOptions: null,
+            touchSensitivity: 15,
+            bigSectionsDestination: null,
+
+            //Accessibility
+            keyboardScrolling: true,
+            animateAnchor: true,
+            recordHistory: true,
+
+            //Design
+            controlArrows: true,
+            verticalCentered: true,
+            sectionsColor : ['#000D26', '#B8C8F4', '#3E3D40', '#3E3D40', '#3E3D40'],
+            paddingTop: '3em',
+            paddingBottom: '10px',
+            fixedElements: '#header, .footer',
+            responsiveWidth: 0,
+            responsiveHeight: 0,
+            responsiveSlides: false,
+            parallax: false,
+            parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+            cards: false,
+            cardsOptions: {perspective: 100, fadeContent: true, fadeBackground: true},
+
+            //Custom selectors
+            sectionSelector: '.section',
+            slideSelector: '.slide',
+
+            lazyLoading: true,
+
+            //events
+            onLeave: function(origin, destination, direction){},
+            afterLoad: function(origin, destination, direction){},
+            afterRender: function(){},
+            afterResize: function(width, height){},
+            afterReBuild: function(){},
+            afterResponsive: function(isResponsive){},
+            afterSlideLoad: function(section, origin, destination, direction){},
+            onSlideLeave: function(section, origin, destination, direction){}
         });
     </script>
 </body>
