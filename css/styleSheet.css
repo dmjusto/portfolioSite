@@ -4,10 +4,19 @@
 /*font-family: 'PT Sans', sans-serif;*/
 /*font-family: 'PT Sans Narrow', sans-serif;*/
 
+/*Color palette*/
+:root {
+    --Orange: #FFA500;
+    --Blue: #08B4FA;
+    --OffWhite: #f2f2f2;
+    --LightGray: #A8A8A8;
+    --LightOrange: #FFCF64;
+}
+
 
 body{
     font-family: 'Roboto', sans-serif;
-    color: #08B4FA;
+    color: var(--Blue);
 ;
 }
 h1{
@@ -25,10 +34,10 @@ p{
 
 #menu li a{
     text-decoration:none;
-    color: #f2f2f2;
+    color: var(--OffWhite);
 }
 #menu li a:hover{
-    color: #A8A8A8;
+    color: var(--LightGray);
 }
 #menu li.active a:hover{
     /*color: #f2f2f2;*/
@@ -39,7 +48,7 @@ p{
     display:block;
 }
 #menu li.active a{
-    color: #08B4FA;
+    color: var(--Blue);
 }
 #menu{
     display: flex;
@@ -64,12 +73,12 @@ p{
     padding: 5px 10px 0 0;
 }
 #menu .links a{
-    color: orange;
+    color: var(--Orange);
     padding: 5px;
     text-decoration: none;
 }
 #menu .links a:hover{
-    color: #A8A8A8;
+    color: var(--LightOrange);
 }
 
 #section0{
@@ -84,7 +93,7 @@ p{
     display: inline-block;
 }
 #section0 .title p{
-    color: #f2f2f2;
+    color: var(--OffWhite);
     margin: 0;
     text-align: end;
 }
