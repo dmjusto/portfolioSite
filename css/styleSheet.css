@@ -42,6 +42,7 @@ p{
     color: #08B4FA;
 }
 #menu{
+    display: flex;
     position:fixed;
     top:0;
     left:0;
@@ -51,7 +52,24 @@ p{
     padding: 0;
     margin:0;
     background-color: rgba(0,0,0, 0.5);
-;
+}
+#menu ul{
+    margin: 0;
+    padding: 0 10px;
+}
+#menu .links {
+    flex-grow: 1;
+    text-align: right;
+    font-size: 28px;
+    padding: 5px 10px 0 0;
+}
+#menu .links a{
+    color: orange;
+    padding: 5px;
+    text-decoration: none;
+}
+#menu .links a:hover{
+    color: #A8A8A8;
 }
 
 #section0{
