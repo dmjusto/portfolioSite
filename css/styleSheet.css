@@ -17,26 +17,9 @@ p{
     font-size: 2em;
 }
 
-#header{
-    position:fixed;
-    height: 50px;
-    display:block;
-    width: 100%;
-    background: #333;
-    z-index:9;
-    text-align:center;
-    color: #f2f2f2;
-    padding: 20px 0 0 0;
-}
-
-#header {
-    top: 0;
-}
-
 #menu li{
     display: inline-block;
     margin: 0 5px;
-    color: #f2f2f2;
     vertical-align: top;
 }
 
@@ -71,9 +54,6 @@ p{
 ;
 }
 
-.section{
-    text-align: left;
-}
 #section0{
      background-image: url(../img/bg9.jpg);
      background-size: cover;
@@ -81,6 +61,18 @@ p{
      background-repeat: no-repeat;
      height: 100%;
  }
+#section0 .title{
+    font-size: 1.65vw;
+    display: inline-block;
+}
+#section0 .title p{
+    color: #f2f2f2;
+    margin: 0;
+    text-align: end;
+}
+#section0 .title h1{
+    margin: 0 0 0 10px;
+}
 #section1{
      background-image: url(../img/bg13.jpg);
      background-size: cover;
