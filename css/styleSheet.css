@@ -15,15 +15,12 @@
 
 
 body{
+    font-family: 'PT Sans', sans-serif;
+    color: var(--OffWhite);
+}
+body h1{
     font-family: 'Roboto', sans-serif;
     color: var(--Blue);
-;
-}
-h1{
-    font-size: 6em;
-}
-p{
-    font-size: 2em;
 }
 
 #menu li{
@@ -81,24 +78,32 @@ p{
     color: var(--LightOrange);
 }
 
-#section0{
+.section h1{
+    font-size: 9vmax;
+    margin: 0;
+    text-shadow: 3px 3px 10px rgba(0,0,0,.5);
+}
+
+#HomePage{
      background-image: url(../img/bg9.jpg);
      background-size: cover;
      background-position: center;
      background-repeat: no-repeat;
      height: 100%;
  }
-#section0 .title{
-    font-size: 1.65vw;
-    display: inline-block;
+#HomePage .flexBox{
+    display: inline-flex;
+    flex-direction: column;
+    padding-left: 7%;
 }
-#section0 .title p{
+#HomePage .lastName{
+    white-space: nowrap;
+}
+#HomePage .flexBox p{
     color: var(--OffWhite);
     margin: 0;
     text-align: end;
-}
-#section0 .title h1{
-    margin: 0 0 0 10px;
+    font-size: 2em;
 }
 #section1 .fp-bg{
      background-image: url(../img/bg13.jpg);
@@ -107,6 +112,11 @@ p{
      background-repeat: no-repeat;
      height: 100%;
  }
+#section1 .flexBox{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
 #section2 .fp-bg{
     background-image: url(../img/bg14.jpg);
     background-size: cover;
@@ -127,4 +137,14 @@ p{
     background-position: center;
     background-repeat: no-repeat;
     height: 100%;
+}
+
+
+
+
+@media only screen and (max-width:620px) {
+    /* For mobile phones: */
+    #HomePage .lastName{
+        white-space: normal;
+    }
 }
