@@ -22,7 +22,9 @@ body h1{
     font-family: 'Roboto', sans-serif;
     color: var(--Blue);
 }
-
+.section h1,p,span{
+    z-index: 10;
+}
 #menu li{
     display: inline-block;
     margin: 0 5px;
@@ -106,6 +108,9 @@ body h1{
     text-align: end;
     font-size: 2em;
 }
+#aboutSection h1{
+    padding-bottom: 20px;
+}
 #aboutSection .fp-bg{
      background-image: url(../img/bg13.jpg);
      background-size: cover;
@@ -117,9 +122,16 @@ body h1{
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
+    margin: 0 10% 0 7%;
 }
 #aboutSection .aboutInfo p{
-    font-size: 2vmax;
+    font-size: 2.5vmax;
+    font-family: 'Roboto', sans-serif;
+}
+#aboutSection .aboutBold{
+    color: var(--Orange);
+    /*font-size: 2.5vmax;*/
+    font-weight: bolder;
 }
 #section2 .fp-bg{
     background-image: url(../img/bg14.jpg);
@@ -150,5 +162,8 @@ body h1{
     /* For mobile phones: */
     #HomePage .lastName{
         white-space: normal;
+    }
+    #aboutSection .aboutInfo p{
+        font-size: 3vmax;
     }
 }
