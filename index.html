@@ -6,6 +6,8 @@
     <title>Dylan Fairbanks</title>
 
     <script src="https://kit.fontawesome.com/a2c70a8f6f.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css"></script>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow|Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styleSheet.css">
     <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
@@ -37,43 +39,38 @@
                 <p >Software Developer</p>
             </div>
         </div>
+
+
+
         <div class="section" id="aboutSection">
             <div class="fp-bg">
-                <div class="container"></div>
+                <div class="aboutInfo"></div>
+                <div class="aboutQuote"></div>
             </div>
-            <div class="flexBox">
-                <h1>About Me</h1>
-                <div class="aboutInfo">
-                    <p>I'm a software <span class="aboutBold">developer</span>. I'm passionate about making and playing <span
-                            class="aboutBold">games</span>. I've been fortunate enough to be a part of several production
-                        <span class="aboutBold">teams</span>, and I'm a big believer in the power of a group of people working
-                        toward a common goal. </p>
-                    <p>I enjoy the <span class="aboutBold">problem solving</span> aspect of programming, and I enjoy continually
-                        challenging myself.
-                    </p>
+        </div>
+
+
+
+        <div class="section" id="skillSection">
+            <div class="fp-bg">
+                <div class="flexBox">
+                    <h1>Skills</h1>
+                    <canvas id="myChart"></canvas>
+
                 </div>
             </div>
         </div>
-        <div class="section" id="section2">
-            <div class="fp-bg">
-                <div class="container"></div>
-            </div>
-            <h1>Skills</h1>
-        </div>
         <div class="section" id="section3">
             <div class="fp-bg">
-                <div class="container"></div>
+                <h1>Portfolio</h1>
             </div>
-            <h1>Portfolio</h1>
         </div>
         <div class="section" id="section4">
             <div class="fp-bg">
-                <div class="container"></div>
+                <h1>Contact Me</h1>
             </div>
-            <h1>Contact Me</h1>
         </div>
     </div>
-
 
     <script type="text/javascript" src="javascript/fullpage.parallax.min.js"></script>
     <script type="text/javascript" src="javascript/fullpage.extensions.min.js"></script>
@@ -89,7 +86,7 @@
 
             //Scrolling
             css3: true,
-            scrollingSpeed: 1000,
+            scrollingSpeed: 1200    ,
             autoScrolling: true,
 
             //Parallax Extension
@@ -97,8 +94,61 @@
             parallaxKey: 'ZHlsYW5mYWlyYmFua3MubmV0Xzh6RWNHRnlZV3hzWVhnPTA4VQ==',
             parallaxOptions: {
                 type: 'reveal',
-                percentage: 62,
+                percentage: 100,
                 property: 'translate'
+            }
+        });
+    </script>
+
+<!--    chart options-->
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+
+            //data
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+
+            // configuration
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                },
+                legend: {
+                    labels:{
+                        fontColor: 'orange'
+                    }
+                },
+                animation:{
+                    duration: '1000'
+                }
             }
         });
     </script>
@@ -106,15 +156,10 @@
 </html>
 
 
-
-<!--<div class="aboutSection">-->
-<!--    <div class="aboutInfo">-->
-<!--        <h1>About Me</h1>-->
-<!--        <p>I'm a software <span class="aboutBold">developer</span>. I'm passionate about making and playing <span-->
-<!--                class="aboutBold">games</span>. I've been fortunate enough to be a part of several production-->
-<!--            <span class="aboutBold">teams</span>, and I'm a big believer in the power of a group of people working-->
-<!--            toward a common goal. </p>-->
-<!--        <p>I enjoy the <span class="aboutBold">problem solving</span> aspect of programming, and I enjoy continually-->
-<!--            challenging myself.</p>-->
-<!--    </div>-->
-<!--</div>-->
+<!--<p>I'm a software <span class="aboutBold">developer</span>. I'm passionate about making and playing <span-->
+<!--        class="aboutBold">games</span>. I've been fortunate enough to be a part of several production-->
+<!--    <span class="aboutBold">teams</span>, and I'm a big believer in the power of a group of people working-->
+<!--    toward a common goal. </p>-->
+<!--<p>I enjoy the <span class="aboutBold">problem solving</span> aspect of programming, and I enjoy continually-->
+<!--    challenging myself.-->
+<!--</p>-->
