@@ -94,15 +94,15 @@ body h1 {
     margin: 0;
 }
 
-.container {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, .1);
-}
+/*.container {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+    /*background-color: rgba(0, 0, 0, .1);*/
+/*}*/
 
 #HomePage .flexBox {
     margin: 0 10% 0 7%;
@@ -110,6 +110,7 @@ body h1 {
 }
 
 #HomePage {
+    background-color: rgba(0, 0, 0, .1);
     background-image: url(../img/bg9.jpg);
     background-size: cover;
     background-position: center;
@@ -187,7 +188,7 @@ body h1 {
         white-space: normal;
     }
 
-    #aboutSection .aboutInfo p {
-        font-size: 2.75vmax;
-    }
+    /*#aboutSection .aboutInfo p {*/
+    /*    font-size: 2.75vmax;*/
+    /*}*/
 }
